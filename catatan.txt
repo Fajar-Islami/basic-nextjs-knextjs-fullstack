@@ -1,0 +1,77 @@
+Menit 3:12 CSR VS SSR
+
+Menit 6:12 Pre Fetching
+
+Untuk memulai project next
+yarn create next-app fullnext
+yarn create next-app
+
+Menit 14:04 Penjelasan folder
+
+Menit 20:00 Penjelasan folder public untuk seperti video, gambar dan file2 lain yang tidak di perlu proses lagi.
+
+Menit 26:50 nextjs sudah built in sass
+
+Menit 33:50 
+
+Menit 47:00 membuat tabel
+
+Menit 1:01:00
+npm install knex mysql
+yarn add knex mysql
+
+knex untuk interaksi langsung ke dbms
+mysql package yang digunakan oleh knex untuk berinteraksi dengan dbms secara tidak langsung (core nya knex)
+
+Menit 1:06:00
+Membuat migration
+https://knexjs.org/#Migrations-CLI
+
+karena knex diinstall dilokal maka di packge.json tambahkan script
+"knex":"knex"
+
+lalu buat init file / knex file untuk konfigurasi knex
+yarn knex init
+
+lalu ubah knexfile.js yang baru dibuat
+
+lalu lakukan migration dengan
+yarn knex migrate:make create_post_table
+
+Menit 1:14:30 migrations
+untuk eksekusi migrasi terakhir
+yarn knex migrate:latest
+
+Menit 1:19:30 crud
+
+Menit 1:40:00 knex devhints
+https://devhints.io/knex
+
+
+Menit 1:54:00 jsonwebtoken
+https://github.com/auth0/node-jsonwebtoken
+
+Menit 2:01:00 instal jwt dan bcryptjs
+npm i bcryptjs jsonwebtoken
+yarn add bcryptjs jsonwebtoken
+
+Menit 2:42:50 return promise
+
+Menit 3:22:50 content-type
+
+3:39:50 JS cookie
+
+4:05:00 next cookies
+yarn add next-cookies
+
+4:12:00 res.writeHead
+redirect di server side next
+res.writeHead(302,{
+    Location:'/posts'
+  }).end()
+  
+
+6:32:00 dotenv-cli
+agar knex bisa baca .env.local
+lalu set dipackage.json
+"knex": "dotenv -e .env.local knex"
